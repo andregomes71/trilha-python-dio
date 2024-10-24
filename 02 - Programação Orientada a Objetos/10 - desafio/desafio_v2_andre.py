@@ -1,5 +1,5 @@
 import textwrap
-from abc import ABC, abstractclassmethod, abstractproperty
+from abc import ABC
 from datetime import datetime
 import pytz
 
@@ -194,11 +194,11 @@ class Historico:
 
 class Transacao(ABC):
     @property
-    @abstractproperty
+   # @abstractproperty
     def valor(self):
         pass
 
-    @abstractclassmethod
+   # @abstractclassmethod
     def registrar(self, conta):
         pass
 
@@ -400,14 +400,14 @@ def main():
         elif opcao == "3":
             exibir_extrato(clientes)
 
-        elif opcao == "4":
+        elif opcao == "6":
             criar_cliente(clientes)
 
-        elif opcao == "5":
+        elif opcao == "4":
             numero_conta = len(contas) + 1
             criar_conta(numero_conta, clientes, contas)
 
-        elif opcao == "6":
+        elif opcao == "5":
             listar_contas(contas)
 
         elif opcao == "7":
